@@ -40,7 +40,6 @@ public class StableLocationComponent extends MapEntityComponent {
         boolean highlighted = forceHighlight || currHighlight>0f;
         if(highlighted)size *= 1.1f;
         Vector2f center = new Vector2f(componentPanel.getPosition().getCenterX(),componentPanel.getPosition().getCenterY());
-        drawFilledCircle(center,size/2f+2f,new Color(0,0,0,190),alphaMult);
         sprite.setSize(size,size);
         sprite.setColor(forceHighlight?Color.cyan:highlighted?Color.white:hooks.isEmpty()?Color.white:new Color(255,210,100));
         sprite.setAlphaMult(alphaMult);

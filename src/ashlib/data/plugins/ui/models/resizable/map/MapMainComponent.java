@@ -110,11 +110,11 @@ public class MapMainComponent implements ExtendedUIPanelPlugin {
                 addTerrains(system);
                 addJumpPoints(system);
             }
-            addPlanets(system);
             if (!Misc.getMinSystemSurveyLevel(system).equals(MarketAPI.SurveyLevel.NONE)) {
-                addCustomEntities(system);
                 addAsteroids(system);
+                addCustomEntities(system);
             }
+            addPlanets(system);
         }
 
         addPointerAndFollower();

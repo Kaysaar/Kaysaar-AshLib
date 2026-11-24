@@ -14,6 +14,7 @@ import java.util.List;
 
 //Inspired by grandeur alex design
 public class ProgressBarComponentV2 implements ExtendedUIPanelPlugin {
+    public static final int PROGRESS_STEPS = 1000;
     CustomPanelAPI mainPanel,componentPanel;
     LabelAPI progressLabel;
     Color barBrackets,barColor;
@@ -98,7 +99,7 @@ public class ProgressBarComponentV2 implements ExtendedUIPanelPlugin {
         };
         Global.getSector().removeScript(influencer);
         Global.getSector().getListenerManager().removeListener(influencer);
-        influencer.setMaxProgress(100);
+        influencer.setMaxProgress(PROGRESS_STEPS);
         this.progress = currProgress;
 
         createUI();
@@ -232,8 +233,7 @@ public class ProgressBarComponentV2 implements ExtendedUIPanelPlugin {
             influencer.setProgress(currentSection);
         }
         else{
-            int percentage = Math.round(progress*100);
-            influencer.setProgress(percentage);
+            influencer.setProgress(Math.round(progress * PROGRESS_STEPS));
         }
 
         CustomPanelAPI componentPanel = Global.getSettings().createCustom(mainPanel.getPosition().getWidth(),mainPanel.getPosition().getHeight(),null);

@@ -24,6 +24,7 @@
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../starsector-core/jaxb-api-2.4.0-b180830.0359-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../starsector-core/starfarer.api.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../starsector-core/starfarer.api.zip!/" />
     </SOURCES>
   </library>
 </component>
